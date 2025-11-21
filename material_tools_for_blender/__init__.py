@@ -74,9 +74,9 @@ class SNA_UL_display_collection_list_4E9BD(bpy.types.UIList):
         return flt_flags, []
 
 
-class SNA_PT_NAME_CHECKER_0C8D5(bpy.types.Panel):
+class SNA_PT_NAME_CHECKER_174D4(bpy.types.Panel):
     bl_label = 'Name Checker'
-    bl_idname = 'SNA_PT_NAME_CHECKER_0C8D5'
+    bl_idname = 'SNA_PT_NAME_CHECKER_174D4'
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_context = ''
@@ -115,7 +115,7 @@ def register():
     global _icons
     _icons = bpy.utils.previews.new()
     bpy.types.Scene.sna_index = bpy.props.IntProperty(name='Index', description='', default=0, subtype='NONE')
-    bpy.utils.register_class(SNA_PT_NAME_CHECKER_0C8D5)
+    bpy.utils.register_class(SNA_PT_NAME_CHECKER_174D4)
     bpy.utils.register_class(SNA_UL_display_collection_list_4E9BD)
 
 
@@ -128,5 +128,5 @@ def unregister():
         km.keymap_items.remove(kmi)
     addon_keymaps.clear()
     del bpy.types.Scene.sna_index
-    bpy.utils.unregister_class(SNA_PT_NAME_CHECKER_0C8D5)
+    bpy.utils.unregister_class(SNA_PT_NAME_CHECKER_174D4)
     bpy.utils.unregister_class(SNA_UL_display_collection_list_4E9BD)
